@@ -70,6 +70,19 @@ document.addEventListener('DOMContentLoaded', function () {
             square[i].classList.remove("hover");
         })
     }
+
+    let btn = document.getElementsByClassName("btn");
+    
+    // resets board 
+    btn[0].addEventListener("click", function() {
+
+        for (let i = 0; i < square.length; i++) {
+            status.innerHTML = "Move your mouse over a square and click to play an X or an O.";
+            status.classList.remove("you-won");
+            square[i].innerHTML = "";
+            square[i].className = "square";
+        }
+    })   
 });
 
 // Checks rowss for match
