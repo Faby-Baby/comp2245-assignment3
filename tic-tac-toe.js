@@ -14,4 +14,36 @@ document.addEventListener('DOMContentLoaded', function () {
             boardDivs[i].className = "square";
     
     }
+
+    let currentPlayer = "X";
+
+    let square = document.getElementsByClassName("square");
+
+    var played = new Array(9);
+    
+    
+    for (let i = 0; i < square.length; i++) {
+
+        // Add event listener to each square
+        square[i].addEventListener("click", function () {
+        
+            if (square[i].innerHTML == "") {
+
+                if (currentPlayer == "X") {
+
+                    square[i].classList.add("X");
+                    played[i] = "X";
+                    square[i].innerHTML = "X";
+                    currentPlayer = "O";    
+
+                } else {
+
+                    square[i].classList.add("O");
+                    played[i] = "O";
+                    square[i].innerHTML = "O";
+                    currentPlayer = "X"
+                }
+            }
+        });
+    }
 });
