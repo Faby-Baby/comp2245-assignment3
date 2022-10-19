@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             status.classList.remove("you-won");
             square[i].innerHTML = "";
             square[i].className = "square";
+            currentPlayer = "X";
         }
     })   
 });
