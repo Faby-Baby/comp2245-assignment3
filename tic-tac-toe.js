@@ -45,5 +45,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         });
+
+        // Add hover class if mouse is over the square
+        square[i].addEventListener("mouseover", function() {
+            square[i].classList.add("hover");
+        })
+
+        // Removes hover class if mouse is not on the square
+        square[i].addEventListener("mouseout", function() {
+            square[i].classList.remove("hover");
+        })
     }
 });
